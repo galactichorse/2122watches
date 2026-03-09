@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>2122 Watches — Authenticated Pre-Owned Luxury Timepieces</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cormorant:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --cream: #faf8f4;
+  --warm-white: #f5f2ec;
+  --linen: #ede8de;
+  --linen-dark: #d9d2c4;
+  --ink: #1c1a17;
+  --ink-mid: #3d3a34;
+  --ink-light: #7a746a;
+  --ink-faint: #b0a898;
+  --burgundy: #6b2737;
+  --burgundy-light: #8a3347;
+  --gold: #8c6d3f;
+  --gold-light: #b08d5a;
+  --font-serif: 'EB Garamond', serif;
+  --font-display: 'Cormorant', serif;
+  --font-sans: 'Jost', sans-serif;
+  --rule: #d4cec4;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 100%; scroll-behavior: smooth; }
+body {
+  background: var(--cream);
+  color: var(--ink);
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* ── TOPBAR ── */
+.topbar {
+  background: var(--ink);
+  color: var(--ink-faint);
+  text-align: center;
+  padding: 0.5rem 2rem;
+  font-family: var(--font-sans);
+  font-size: 0.62rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+.topbar span { color: var(--gold-light); }
+
+/* ── HEADER ── */
+header {
+  background: var(--cream);
+  border-bottom: 1px solid var(--rule);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.header-inner {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 2.5rem;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  height: 80px;
+}
+.header-left {
+  display: flex; gap: 2.2rem; align-items: center;
+}
+.header-left a {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink-light);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.header-left a:hover, .header-left a.active { color: var(--ink); }
+.header-left a.active { border-bottom: 1px solid var(--ink); padding-bottom: 1px; }
+
+.logo-center {
+  text-align: center;
+}
+.logo-name {
+  font-family: var(--font-display);
+  font-size: 1.85rem;
+  font-weight: 300;
+  letter-spacing: 0.18em;
+  color: var(--ink);
+  line-height: 1;
+  display: block;
+}
+.logo-rule {
+  display: flex; align-items: center; gap: 0.6rem; justify-content: center; margin-top: 3px;
+}
+.logo-rule::before, .logo-rule::after { content: ''; flex: 1; height: 1px; background: var(--gold); opacity: 0.5; max-width: 30px; }
+.logo-tagline {
+  font-family: var(--font-sans);
+  font-size: 0.48rem;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.header-right {
+  display: flex; justify-content: flex-end; align-items: center; gap: 1.5rem;
+}
+.header-right a {
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink-light);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.header-right a:hover { color: var(--ink); }
+.enquire-link {
+  color: var(--burgundy) !important;
+  border: 1px solid var(--burgundy) !important;
+  padding: 0.4rem 1rem;
+  transition: all 0.2s !important;
+}
+.enquire-link:hover { background: var(--burgundy) !important; color: white !important; }
+
+/* ── HERO ── */
+.hero {
+  border-bottom: 1px solid var(--rule);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 480px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+.hero-text {
+  padding: 5rem 4rem 5rem 2.5rem;
+  display: flex; flex-direction: column; justify-content: center;
+  border-right: 1px solid var(--rule);
+}
+.hero-kicker {
+  font-family: var(--font-sans);
+  font-size: 0.58rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--burgundy);
+  margin-bottom: 1.2rem;
+  display: flex; align-items: center; gap: 0.8rem;
+}
+.hero-kicker::before { content: ''; width: 24px; height: 1px; background: var(--burgundy); }
+.hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 5vw, 4.2rem);
+  font-weight: 300;
+  line-height: 1.1;
+  color: var(--ink);
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.01em;
+}
+.hero-title em { font-style: italic; color: var(--burgundy); }
+.hero-body {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  color: var(--ink-light);
+  line-height: 1.8;
+  max-width: 400px;
+  margin-bottom: 2.5rem;
+}
+.hero-cta-row { display: flex; align-items: center; gap: 2rem; }
+.btn-primary {
+  font-family: var(--font-sans);
+  font-size: 0.62rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: white;
+  background: var(--ink);
+  border: 1px solid var(--ink);
+  padding: 0.75rem 2rem;
+  text-decoration: none;
+  transition: all 0.2s;
+  display: inline-block;
+}
+.btn-primary:hover { background: var(--burgundy); border-color: var(--burgundy); }
+.btn-text {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--ink-light);
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 1px;
+  transition: color 0.2s, border-color 0.2s;
+}
+.btn-text:hover { color: var(--ink); border-color: var(--ink-light); }
+
+.hero-stats {
+  padding: 3rem 2.5rem 3rem 4rem;
+  display: flex; flex-direction: column; justify-content: center; gap: 2.5rem;
+}
+.hero-stat { border-left: 2px solid var(--gold); padding-left: 1.2rem; }
+.stat-num {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 300;
+  color: var(--ink);
+  line-height: 1;
+  display: block;
+  letter-spacing: -0.02em;
+}
+.stat-label {
+  font-family: var(--font-sans);
+  font-size: 0.55rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin-top: 4px;
+  display: block;
+}
+.stat-note {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.82rem;
+  color: var(--ink-light);
+  margin-top: 2px;
+  display: block;
+}
+
+/* ── TRUST BAR ── */
+.trust-bar {
+  border-bottom: 1px solid var(--rule);
+  background: var(--warm-white);
+}
+.trust-bar-inner {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 1.4rem 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3.5rem;
+}
+.trust-item {
+  display: flex; align-items: center; gap: 0.7rem;
+  font-family: var(--font-sans);
+  font-size: 0.6rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink-light);
+}
+.trust-item svg { opacity: 0.5; flex-shrink: 0; }
+.trust-sep { width: 1px; height: 18px; background: var(--rule); }
+
+/* ── SHOP SECTION ── */
+.shop-section {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 4rem 2.5rem 6rem;
+}
+
+.section-head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid var(--rule);
+}
+.section-label {
+  font-family: var(--font-sans);
+  font-size: 0.58rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin-bottom: 0.3rem;
+  display: block;
+}
+.section-title {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 300;
+  color: var(--ink);
+  letter-spacing: 0.05em;
+  line-height: 1;
+}
+.result-count {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--ink-faint);
+}
+
+/* Filter & Sort Bar */
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+.toolbar-label {
+  font-family: var(--font-sans);
+  font-size: 0.56rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  margin-right: 0.4rem;
+}
+.filter-btn {
+  font-family: var(--font-sans);
+  font-size: 0.58rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ink-light);
+  background: transparent;
+  border: 1px solid var(--rule);
+  padding: 0.38rem 0.9rem;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.filter-btn:hover { border-color: var(--ink-light); color: var(--ink); }
+.filter-btn.active { background: var(--ink); border-color: var(--ink); color: white; }
+.sort-sel {
+  margin-left: auto;
+  font-family: var(--font-sans);
+  font-size: 0.58rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-light);
+  background: transparent;
+  border: 1px solid var(--rule);
+  padding: 0.38rem 0.8rem;
+  cursor: pointer;
+  outline: none;
+  appearance: none;
+}
+.sort-sel option { background: white; color: var(--ink); }
+
+/* ── LOADING ── */
+.loading-state {
+  text-align: center;
+  padding: 6rem 2rem;
+}
+.spinner {
+  width: 32px; height: 32px;
+  border: 1px solid var(--rule);
+  border-top-color: var(--gold);
+  border-radius: 50%;
+  animation: spin 0.9s linear infinite;
+  margin: 0 auto 1.5rem;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.loading-state p {
+  font-family: var(--font-serif);
+  font-style: italic;
+  color: var(--ink-faint);
+  font-size: 0.95rem;
+}
+
+/* ── SETUP BANNER ── */
+.setup-banner {
+  border: 1px solid var(--linen-dark);
+  background: var(--warm-white);
+  padding: 2rem 2.5rem;
+  margin-bottom: 2.5rem;
+  display: flex; gap: 1.5rem;
+}
+.setup-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 0.1rem; opacity: 0.7; }
+.setup-banner h4 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--ink);
+  margin-bottom: 0.4rem;
+}
+.setup-banner p {
+  font-family: var(--font-serif);
+  font-size: 0.9rem;
+  color: var(--ink-light);
+  line-height: 1.7;
+}
+.setup-banner code {
+  font-family: monospace;
+  font-size: 0.78rem;
+  background: var(--linen);
+  padding: 0.1rem 0.35rem;
+  color: var(--burgundy);
+}
+
+/* ── WATCH GRID ── */
+.watch-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+  gap: 2rem;
+}
+
+/* ── WATCH CARD ── */
+.watch-card {
+  background: white;
+  border: 1px solid var(--rule);
+  display: flex; flex-direction: column;
+  transition: box-shadow 0.25s, transform 0.25s;
+  animation: fadeUp 0.4s ease both;
+}
+.watch-card:hover {
+  box-shadow: 0 8px 40px rgba(28,26,23,0.1);
+  transform: translateY(-2px);
+}
+@keyframes fadeUp { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+.card-image {
+  position: relative;
+  aspect-ratio: 1;
+  background: var(--warm-white);
+  overflow: hidden;
+}
+.card-image img {
+  width: 100%; height: 100%;
+  object-fit: contain;
+  padding: 2rem;
+  transition: transform 0.5s ease;
+}
+.watch-card:hover .card-image img { transform: scale(1.04); }
+.img-placeholder {
+  width: 100%; height: 100%;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center; gap: 0.6rem;
+}
+.img-placeholder svg { opacity: 0.2; }
+.img-placeholder span {
+  font-family: var(--font-sans);
+  font-size: 0.5rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+
+.avail-badge {
+  position: absolute; top: 0.85rem; left: 0.85rem;
+  font-family: var(--font-sans);
+  font-size: 0.5rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 500;
+  padding: 0.22rem 0.6rem;
+  z-index: 2;
+}
+.avail-badge.available { background: white; color: var(--burgundy); border: 1px solid var(--burgundy); }
+.avail-badge.sold { background: white; color: var(--ink-faint); border: 1px solid var(--rule); }
+
+.limited-badge {
+  position: absolute; top: 0.85rem; right: 0.85rem;
+  font-family: var(--font-sans);
+  font-size: 0.48rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  border: 1px solid var(--gold);
+  padding: 0.18rem 0.5rem;
+  background: white;
+  z-index: 2;
+}
+
+.sold-overlay {
+  position: absolute; inset: 0;
+  background: rgba(250,248,244,0.65);
+  display: flex; align-items: center; justify-content: center; z-index: 3;
+}
+.sold-overlay span {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: 1.6rem;
+  letter-spacing: 0.3em;
+  color: var(--ink-light);
+  border: 1px solid var(--ink-light);
+  padding: 0.3rem 1.2rem;
+  background: white;
+}
+
+/* Card body */
+.card-body {
+  padding: 1.4rem 1.5rem 1.5rem;
+  display: flex; flex-direction: column; flex: 1;
+  border-top: 1px solid var(--rule);
+}
+
+.card-brand {
+  font-family: var(--font-sans);
+  font-size: 0.56rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.25rem;
+}
+.card-name {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: var(--ink);
+  line-height: 1.2;
+  margin-bottom: 0.2rem;
+}
+.card-ref {
+  font-family: var(--font-sans);
+  font-size: 0.54rem;
+  letter-spacing: 0.12em;
+  color: var(--ink-faint);
+  margin-bottom: 1.1rem;
+}
+
+.card-specs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.4rem 0.6rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--linen);
+}
+.spec { display: flex; flex-direction: column; gap: 0.06rem; }
+.spec-l {
+  font-family: var(--font-sans);
+  font-size: 0.46rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+.spec-v {
+  font-family: var(--font-serif);
+  font-size: 0.88rem;
+  color: var(--ink-mid);
+}
+
+/* Tags */
+.card-tags { display: flex; flex-wrap: wrap; gap: 0.3rem; margin-bottom: 0.9rem; }
+.ctag {
+  font-family: var(--font-sans);
+  font-size: 0.48rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-light);
+  border: 1px solid var(--rule);
+  padding: 0.14rem 0.42rem;
+  background: var(--warm-white);
+}
+.ctag.auth { border-color: rgba(107,39,55,0.25); color: var(--burgundy); background: rgba(107,39,55,0.04); }
+
+/* Condition grade colours */
+.ctag.grade-mint      { border-color: rgba(30,110,60,0.3);  color: #1a6e3c; background: rgba(30,110,60,0.06); }
+.ctag.grade-excellent { border-color: rgba(30,80,140,0.3);  color: #1a508c; background: rgba(30,80,140,0.06); }
+.ctag.grade-good      { border-color: rgba(140,109,63,0.35);color: var(--gold); background: rgba(140,109,63,0.06); }
+.ctag.grade-fair      { border-color: rgba(160,100,20,0.3); color: #8a5a10; background: rgba(160,100,20,0.06); }
+.ctag.grade-poor      { border-color: rgba(107,39,55,0.25); color: var(--burgundy); background: rgba(107,39,55,0.04); }
+
+/* Condition detail note */
+.card-condition-detail {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.85rem;
+  color: var(--ink-light);
+  line-height: 1.55;
+  margin-bottom: 0.75rem;
+  padding-left: 0.7rem;
+  border-left: 2px solid var(--linen-dark);
+}
+/* Sold date inline */
+.sold-date {
+  font-family: var(--font-serif);
+  font-style: italic;
+  color: var(--ink-faint);
+  font-size: 0.88rem;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+/* BPW */
+.card-bpw {
+  display: flex; gap: 1rem; margin-bottom: 1rem;
+}
+.bpw {
+  display: flex; align-items: center; gap: 0.3rem;
+  font-family: var(--font-sans);
+  font-size: 0.5rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+.bpw-dot {
+  width: 13px; height: 13px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.5rem; font-weight: 600; flex-shrink: 0;
+}
+.bpw-dot.y { background: rgba(107,39,55,0.08); color: var(--burgundy); border: 1px solid rgba(107,39,55,0.25); }
+.bpw-dot.n { background: var(--warm-white); color: var(--ink-faint); border: 1px solid var(--rule); }
+
+/* Price row */
+.card-price {
+  margin-top: auto;
+  padding-top: 1rem;
+  border-top: 1px solid var(--linen);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 0.8rem;
+}
+.price-left { display: flex; flex-direction: column; gap: 0.1rem; }
+.price-lbl {
+  font-family: var(--font-sans);
+  font-size: 0.48rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+}
+.price-retail {
+  font-family: var(--font-serif);
+  font-size: 0.82rem;
+  color: var(--ink-faint);
+  text-decoration: line-through;
+}
+.price-ask {
+  font-family: var(--font-display);
+  font-size: 1.65rem;
+  font-weight: 400;
+  color: var(--ink);
+  letter-spacing: 0.01em;
+  line-height: 1;
+}
+.price-ask.tbd {
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--ink-light);
+}
+.price-sold {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: var(--ink-faint);
+  letter-spacing: 0.01em;
+  line-height: 1;
+}
+.enquire-btn {
+  font-family: var(--font-sans);
+  font-size: 0.58rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: white;
+  background: var(--burgundy);
+  border: 1px solid var(--burgundy);
+  padding: 0.55rem 1.1rem;
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.enquire-btn:hover { background: var(--ink); border-color: var(--ink); }
+.enquire-btn.sold-btn {
+  background: transparent;
+  border: 1px solid var(--rule);
+  color: var(--ink-faint);
+  cursor: default;
+}
+
+/* ── MODAL ── */
+.modal-overlay {
+  position: fixed; inset: 0; z-index: 200;
+  background: rgba(28,26,23,0.55);
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.22s;
+  padding: 2rem;
+  backdrop-filter: blur(3px);
+}
+.modal-overlay.open { opacity: 1; pointer-events: all; }
+.modal {
+  background: white;
+  border: 1px solid var(--rule);
+  width: 100%; max-width: 480px;
+  max-height: 90vh; overflow-y: auto;
+  transform: translateY(16px);
+  transition: transform 0.22s;
+}
+.modal-overlay.open .modal { transform: translateY(0); }
+.modal-top {
+  padding: 1.8rem 2rem 1.4rem;
+  border-bottom: 1px solid var(--rule);
+  display: flex; justify-content: space-between; align-items: flex-start;
+}
+.modal-watch { }
+.modal-kicker {
+  font-family: var(--font-sans);
+  font-size: 0.52rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 0.25rem;
+}
+.modal-name {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: var(--ink);
+  line-height: 1.2;
+}
+.modal-ref {
+  font-family: var(--font-sans);
+  font-size: 0.54rem;
+  letter-spacing: 0.12em;
+  color: var(--ink-faint);
+  margin-top: 3px;
+}
+.modal-close {
+  background: none; border: none; color: var(--ink-faint); font-size: 1.1rem; cursor: pointer; transition: color 0.15s; padding: 0; line-height: 1; flex-shrink: 0;
+}
+.modal-close:hover { color: var(--ink); }
+.modal-body { padding: 1.8rem 2rem 2rem; }
+.modal-intro {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.92rem;
+  color: var(--ink-light);
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+.mfield { margin-bottom: 1rem; }
+.mlabel {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.52rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-light);
+  margin-bottom: 0.35rem;
+}
+.minput, .mtextarea {
+  width: 100%;
+  background: var(--warm-white);
+  border: 1px solid var(--rule);
+  color: var(--ink);
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  padding: 0.65rem 0.85rem;
+  outline: none;
+  transition: border-color 0.15s;
+  resize: vertical;
+}
+.minput:focus, .mtextarea:focus { border-color: var(--ink-light); background: white; }
+.minput::placeholder, .mtextarea::placeholder { color: var(--ink-faint); }
+.mtextarea { min-height: 90px; }
+.msubmit {
+  width: 100%;
+  font-family: var(--font-sans);
+  font-size: 0.62rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: white;
+  background: var(--ink);
+  border: none;
+  padding: 0.85rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 0.4rem;
+}
+.msubmit:hover { background: var(--burgundy); }
+.mnote {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.8rem;
+  color: var(--ink-faint);
+  text-align: center;
+  margin-top: 0.7rem;
+}
+.msuccess {
+  text-align: center; padding: 1rem 0; display: none;
+}
+.msuccess h4 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 400; color: var(--ink); margin-bottom: 0.4rem; }
+.msuccess p { font-family: var(--font-serif); font-style: italic; font-size: 0.9rem; color: var(--ink-light); }
+
+/* ── FOOTER ── */
+footer {
+  background: var(--ink);
+  color: var(--ink-faint);
+}
+.footer-inner {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 3rem 2.5rem;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 2rem;
+}
+.footer-links { display: flex; gap: 2rem; }
+.footer-links a {
+  font-family: var(--font-sans);
+  font-size: 0.58rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+.footer-links a:hover { color: var(--gold-light); }
+.footer-logo {
+  text-align: center;
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+  color: white;
+}
+.footer-copy {
+  text-align: right;
+  font-family: var(--font-sans);
+  font-size: 0.54rem;
+  letter-spacing: 0.15em;
+  color: var(--ink-light);
+  opacity: 0.5;
+}
+
+@media (max-width: 900px) {
+  .header-inner { grid-template-columns: auto 1fr; gap: 1rem; }
+  .header-right { display: none; }
+  .hero { grid-template-columns: 1fr; }
+  .hero-stats { display: none; }
+  .hero-text { padding: 3rem 2rem; border-right: none; }
+  footer .footer-inner { grid-template-columns: 1fr; text-align: center; }
+  .footer-links { justify-content: center; }
+  .footer-copy { text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">Authenticated Pre-Owned Luxury Timepieces &nbsp;·&nbsp; <span>24-hour enquiry response</span> &nbsp;·&nbsp; Box, Papers &amp; Condition Verified</div>
+
+<header>
+  <div class="header-inner">
+    <nav class="header-left">
+      <a href="index.html" class="active">Shop</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="logo-center">
+      <span class="logo-name">2122 Watches</span>
+      <div class="logo-rule"><span class="logo-tagline">Est. 2025</span></div>
+    </div>
+    <div class="header-right">
+      <a href="contact.html" class="enquire-link">Make an Enquiry</a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" style="border-bottom:1px solid var(--rule);">
+  <div class="hero-text">
+    <p class="hero-kicker">Curated Pre-Owned Timepieces</p>
+    <h1 class="hero-title">Every watch tells<br><em>a story.</em><br>We verify it.</h1>
+    <p class="hero-body">2122 Watches offers a carefully curated selection of authenticated pre-owned luxury timepieces. Each piece is individually assessed, condition-graded, and priced with complete transparency.</p>
+    <div class="hero-cta-row">
+      <a href="#inventory" class="btn-primary">View Inventory</a>
+      <a href="contact.html" class="btn-text">Contact us →</a>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="hero-stat">
+      <span class="stat-num" id="heroAvail">—</span>
+      <span class="stat-label">Available Now</span>
+      <span class="stat-note">Ready to purchase</span>
+    </div>
+    <div class="hero-stat">
+      <span class="stat-num" id="heroBrands">—</span>
+      <span class="stat-label">Maisons</span>
+      <span class="stat-note">From Rolex to Nomos</span>
+    </div>
+    <div class="hero-stat">
+      <span class="stat-num">24h</span>
+      <span class="stat-label">Response Time</span>
+      <span class="stat-note">On every enquiry</span>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-bar-inner">
+    <div class="trust-item">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      Authenticated
+    </div>
+    <div class="trust-sep"></div>
+    <div class="trust-item">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 12l2 2 4-4"/><path d="M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z"/></svg>
+      Condition Graded
+    </div>
+    <div class="trust-sep"></div>
+    <div class="trust-item">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+      Secure Transaction
+    </div>
+    <div class="trust-sep"></div>
+    <div class="trust-item">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      Transparent Pricing
+    </div>
+    <div class="trust-sep"></div>
+    <div class="trust-item">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      24h Response
+    </div>
+  </div>
+</div>
+
+<!-- INVENTORY -->
+<section class="shop-section" id="inventory">
+  <div class="section-head">
+    <div>
+      <span class="section-label">Current Listings</span>
+      <h2 class="section-title">Available Timepieces</h2>
+    </div>
+    <span class="result-count" id="resultCount"></span>
+  </div>
+
+  <div class="toolbar">
+    <span class="toolbar-label">Show</span>
+    <button class="filter-btn active" data-f="all">All</button>
+    <button class="filter-btn" data-f="Available">Available</button>
+    <button class="filter-btn" data-f="Sold Out">Sold</button>
+    <select class="sort-sel" id="sortSel">
+      <option value="default">Sort: Default</option>
+      <option value="asc">Price: Low to High</option>
+      <option value="desc">Price: High to Low</option>
+      <option value="alpha">Name: A–Z</option>
+    </select>
+  </div>
+
+  <div id="inventoryWrap">
+    <div class="loading-state">
+      <div class="spinner"></div>
+      <p>Loading inventory…</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="index.html">Shop</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-logo">2122 Watches</div>
+    <div class="footer-copy">© 2025 2122 Watches. All rights reserved.</div>
+  </div>
+</footer>
+
+<!-- ENQUIRY MODAL -->
+<div class="modal-overlay" id="modal">
+  <div class="modal">
+    <div class="modal-top">
+      <div class="modal-watch">
+        <span class="modal-kicker" id="mBrand">—</span>
+        <div class="modal-name" id="mName">—</div>
+        <div class="modal-ref" id="mRef">—</div>
+      </div>
+      <button class="modal-close" id="mClose">✕</button>
+    </div>
+    <div class="modal-body">
+      <p class="modal-intro">Submit your enquiry below and we'll respond within 24 hours with availability confirmation, additional photographs, and payment options.</p>
+      <div id="mFormWrap">
+        <div class="mfield">
+          <label class="mlabel" for="mName2">Your Name</label>
+          <input class="minput" type="text" id="mName2" placeholder="Full name">
+        </div>
+        <div class="mfield">
+          <label class="mlabel" for="mEmail">Email Address</label>
+          <input class="minput" type="email" id="mEmail" placeholder="you@example.com">
+        </div>
+        <div class="mfield">
+          <label class="mlabel" for="mMsg">Message <span style="opacity:0.5;font-size:0.9em">(optional)</span></label>
+          <textarea class="mtextarea" id="mMsg" placeholder="Any questions, requests for additional photos, or preferred payment method…"></textarea>
+        </div>
+        <button class="msubmit" id="mSubmit">Submit Enquiry</button>
+        <p class="mnote">We respond within 24 hours · No obligation whatsoever</p>
+      </div>
+      <div class="msuccess" id="mSuccess">
+        <h4>Enquiry Received</h4>
+        <p>Thank you. We will be in touch within 24 hours.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+// ── CONFIG ──
+// File → Share → Publish to web → CSV → paste that URL here
+const SHEET_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vR-EIkhRqaTZbi4IZAZ8JJj6_4yfUwQIWjYQEuH3f0uzqhvHHwfvb6M-SWGhu92fD0zYeTrW-Qie9lD/pub?gid=0&single=true&output=csv';
+
+let allWatches = [], activeFilter = 'all', sortMode = 'default', currentWatch = null;
+
+// ── CSV PARSER ──
+function parseCSV(text) {
+  const rows = text.trim().split('\n');
+  const headers = rows[0].split(',').map(h => h.replace(/^"|"$/g,'').trim());
+  return rows.slice(1).map(line => {
+    const vals = []; let cur = '', inQ = false;
+    for (let c of line) {
+      if (c === '"') inQ = !inQ;
+      else if (c === ',' && !inQ) { vals.push(cur.trim()); cur = ''; }
+      else cur += c;
+    }
+    vals.push(cur.trim());
+    const obj = {};
+    headers.forEach((h,i) => obj[h] = (vals[i]||'').replace(/^"|"$/g,'').trim());
+    return obj;
+  }).filter(r => r['Name'] && r['Name'].trim());
+}
+
+// ── COLUMN MAPPING ──
+// Maps your exact Google Sheet column headers → normalised watch object
+function mapRow(r) {
+  const pNum = v => { const n = parseFloat((v||'').replace(/[^0-9.]/g,'')); return isNaN(n) ? null : n; };
+  const pBool = v => { if (!v) return null; return /^(yes|true|y|1)$/i.test(v.trim()); };
+  const pArr  = v => v ? v.split(',').map(s=>s.trim()).filter(Boolean) : [];
+
+  return {
+    // Identity
+    name:             r['Name']                    || '',
+    brand:            r['Brand']                   || '',
+    reference:        r['Reference Number']        || '',
+
+    // Provenance
+    box:              pBool(r['Box']),
+    papers:           pBool(r['Papers']),
+    warrantyCard:     pBool(r['Warranty Card']),   // has the physical card
+    warrantyActive:   pBool(r['Warranty Active']), // still within warranty period
+
+    // Condition
+    conditionGrade:   r['Condition Notes (Mint, Excellent, Good, Fair, Poor)'] || '',
+    conditionDetail:  r['Details of Condition']   || '',
+
+    // Pricing & availability
+    asking:           pNum(r['Asking Price']),
+    availability:     r['Availability']            || 'Available',
+
+    // Media
+    imageUrl:         r['Pics']                    || '',
+
+    // Specs
+    caseSize:         pNum(r['Case Size']),
+    caseMaterial:     r['Case Material']           || '',
+    braceletMaterial: r['Bracelet Material']       || '',
+    complications:    pArr(r['Complications']),
+
+    // Sale record (sold-out only)
+    soldOn:           r['Sold On']                 || '',
+  };
+}
+
+// ── FORMAT DATE → Month Year only ──
+function fmtSoldDate(raw) {
+  if (!raw) return null;
+  const d = new Date(raw);
+  if (isNaN(d.getTime())) return null;
+  return d.toLocaleDateString('en-GB', { month: 'long', year: 'numeric' });
+}
+
+const fmt = n => n ? '$' + Math.round(n).toLocaleString() : null;
+
+// ── LOAD ──
+async function load() {
+  if (!SHEET_URL || SHEET_URL === 'YOUR_GOOGLE_SHEET_CSV_URL_HERE') {
+    allWatches = demoes();
+    render(); updateStats(); return;
+  }
+  try {
+    const r = await fetch(SHEET_URL);
+    if (!r.ok) throw new Error();
+    allWatches = parseCSV(await r.text()).map(mapRow);
+    render(); updateStats();
+  } catch {
+    document.getElementById('inventoryWrap').innerHTML =
+      `<div class="loading-state"><p style="color:var(--burgundy)">Could not load inventory. Please check the sheet URL and ensure it is published publicly as CSV.</p></div>`;
+  }
+}
+
+// ── DEMO DATA (shown until sheet is connected) ──
+function demoes() {
+  return [
+    { name:'Cosmograph Daytona', brand:'Rolex', reference:'116500LN', asking:29090, availability:'Available', box:false, papers:false, warrantyCard:false, warrantyActive:false, conditionGrade:'Excellent', conditionDetail:'Minor signs of wear on bracelet. Authentication card included.', complications:['Chronograph'], caseMaterial:'Steel', braceletMaterial:'Steel', caseSize:40, soldOn:'', imageUrl:'' },
+    { name:'Speedmaster Moonshine Gold', brand:'Omega', reference:'310.60.42.50.10.001', asking:28380, availability:'Available', box:true, papers:true, warrantyCard:true, warrantyActive:true, conditionGrade:'Excellent', conditionDetail:'Minor signs of wear. Full set with authentication card.', complications:['Chronograph'], caseMaterial:'Moonshine Gold', braceletMaterial:'Gold', caseSize:42, soldOn:'', imageUrl:'' },
+    { name:'Overseas Self-Winding', brand:'Vacheron Constantin', reference:'4520V/210A-B128', asking:null, availability:'Sold Out', box:true, papers:true, warrantyCard:true, warrantyActive:true, conditionGrade:'Excellent', conditionDetail:'', complications:['Date'], caseMaterial:'Steel', braceletMaterial:'Steel / Leather / Rubber', caseSize:41, soldOn:'2025-02-14', imageUrl:'' },
+    { name:'Historiques American 1921', brand:'Vacheron Constantin', reference:'82035/000R-9359', asking:24497, availability:'Available', box:false, papers:false, warrantyCard:false, warrantyActive:false, conditionGrade:'Good', conditionDetail:'Authentication card present. Minor wear consistent with age.', complications:[], caseMaterial:'Rose Gold', braceletMaterial:'Alligator leather', caseSize:40, soldOn:'', imageUrl:'' },
+  ];
+}
+
+// ── STATS ──
+function updateStats() {
+  document.getElementById('heroAvail').textContent = allWatches.filter(w => w.availability !== 'Sold Out').length;
+  document.getElementById('heroBrands').textContent = new Set(allWatches.map(w => w.brand).filter(Boolean)).size;
+}
+
+// ── CONDITION GRADE STYLE ──
+const gradeClass = g => {
+  const map = { mint:'grade-mint', excellent:'grade-excellent', good:'grade-good', fair:'grade-fair', poor:'grade-poor' };
+  return map[(g||'').toLowerCase()] || '';
+};
+
+// ── RENDER ──
+function render() {
+  let list = allWatches.filter(w => activeFilter === 'all' || w.availability === activeFilter);
+  if (sortMode === 'asc')   list.sort((a,b) => (a.asking||0) - (b.asking||0));
+  if (sortMode === 'desc')  list.sort((a,b) => (b.asking||0) - (a.asking||0));
+  if (sortMode === 'alpha') list.sort((a,b) => a.name.localeCompare(b.name));
+
+  document.getElementById('resultCount').textContent =
+    list.length === 1 ? '1 timepiece' : `${list.length} timepieces`;
+
+  const wrap = document.getElementById('inventoryWrap');
+
+  const setupBanner = (!SHEET_URL || SHEET_URL === 'YOUR_GOOGLE_SHEET_CSV_URL_HERE') ? `
+    <div class="setup-banner">
+      <span class="setup-icon">ℹ️</span>
+      <div>
+        <h4>Connect Your Inventory Sheet</h4>
+        <p>Replace <code>YOUR_GOOGLE_SHEET_CSV_URL_HERE</code> in the script with your Google Sheet CSV link.<br><br>
+        In Google Sheets: <strong>File → Share → Publish to web → Select "CSV" → Copy link</strong></p>
+      </div>
+    </div>` : '';
+
+  if (!list.length) {
+    wrap.innerHTML = setupBanner + `<div class="loading-state"><p>No timepieces match this filter.</p></div>`;
+    return;
+  }
+
+  const grid = document.createElement('div');
+  grid.className = 'watch-grid';
+
+  list.forEach((w, i) => {
+    const sold = w.availability === 'Sold Out';
+    const card = document.createElement('div');
+    card.className = 'watch-card';
+    card.style.animationDelay = (i * 0.06) + 's';
+
+    // ── Image ──
+    const imgHtml = w.imageUrl
+      ? `<img src="${w.imageUrl}" alt="${w.name}" loading="lazy">`
+      : `<div class="img-placeholder">
+          <svg width="44" height="44" viewBox="0 0 48 48" fill="none">
+            <circle cx="24" cy="24" r="19" stroke="#1c1a17" stroke-width="1"/>
+            <circle cx="24" cy="24" r="13" stroke="#1c1a17" stroke-width="0.75"/>
+            <line x1="24" y1="11" x2="24" y2="16" stroke="#1c1a17" stroke-width="1.25"/>
+            <line x1="24" y1="24" x2="30" y2="20" stroke="#1c1a17" stroke-width="1.25" stroke-linecap="round"/>
+            <circle cx="24" cy="24" r="1.5" fill="#1c1a17"/>
+          </svg>
+          <span>Image Coming Soon</span>
+        </div>`;
+
+    // ── Box / Papers / Warranty ──
+    // Show warrantyCard as "Papers" equivalent, warrantyActive as in-warranty indicator
+    const hasBPW = w.box !== null || w.warrantyCard !== null;
+    const bpwHtml = hasBPW ? `
+      <div class="card-bpw">
+        ${w.box !== null ? `<div class="bpw"><span class="bpw-dot ${w.box?'y':'n'}">${w.box?'✓':'✗'}</span>Box</div>` : ''}
+        ${w.papers !== null ? `<div class="bpw"><span class="bpw-dot ${w.papers?'y':'n'}">${w.papers?'✓':'✗'}</span>Papers</div>` : ''}
+        ${w.warrantyCard !== null ? `<div class="bpw"><span class="bpw-dot ${w.warrantyCard?'y':'n'}">${w.warrantyCard?'✓':'✗'}</span>Warranty Card</div>` : ''}
+        ${w.warrantyActive !== null ? `<div class="bpw"><span class="bpw-dot ${w.warrantyActive?'y':'n'}">${w.warrantyActive?'✓':'✗'}</span>In Warranty</div>` : ''}
+      </div>` : '';
+
+    // ── Condition grade badge ──
+    const gradeHtml = w.conditionGrade
+      ? `<div class="card-tags"><span class="ctag ${gradeClass(w.conditionGrade)}">${w.conditionGrade}</span></div>`
+      : '';
+
+    // ── Condition detail — hidden on sold-out cards ──
+    const detailHtml = (!sold && w.conditionDetail)
+      ? `<p class="card-condition-detail">${w.conditionDetail}</p>`
+      : '';
+
+    // ── Complications ──
+    const compHtml = w.complications && w.complications.length
+      ? `<div class="card-tags" style="margin-top:0.4rem">${w.complications.map(c=>`<span class="ctag">${c}</span>`).join('')}</div>`
+      : '';
+
+    // ── Price — hidden on sold-out cards ──
+    let priceHtml = '';
+    if (sold) {
+      const soldDateStr = fmtSoldDate(w.soldOn);
+      priceHtml = `
+        <div class="card-price">
+          <div class="price-left">
+            <span class="price-lbl">This piece has been sold${soldDateStr ? ' &nbsp;·&nbsp; <span class="sold-date">' + soldDateStr + '</span>' : ''}</span>
+          </div>
+          <button class="enquire-btn sold-btn" disabled>Sold</button>
+        </div>`;
+    } else {
+      const askHtml = w.asking
+        ? `<span class="price-ask">${fmt(w.asking)}</span>`
+        : `<span class="price-ask tbd">Enquire for price</span>`;
+      priceHtml = `
+        <div class="card-price">
+          <div class="price-left">
+            <span class="price-lbl">Asking Price</span>
+            ${askHtml}
+          </div>
+          <button class="enquire-btn">Enquire</button>
+        </div>`;
+    }
+
+    // ── Specs ──
+    const specs = [
+      w.caseSize         ? { l:'Case Size',  v: w.caseSize + 'mm' }  : null,
+      w.caseMaterial     ? { l:'Case',       v: w.caseMaterial }     : null,
+      w.braceletMaterial ? { l:'Bracelet',   v: w.braceletMaterial } : null,
+    ].filter(Boolean);
+
+    const specsHtml = specs.length ? `
+      <div class="card-specs" style="grid-template-columns: repeat(${Math.min(specs.length, 2)}, 1fr)">
+        ${specs.map(s=>`<div class="spec"><span class="spec-l">${s.l}</span><span class="spec-v">${s.v}</span></div>`).join('')}
+      </div>` : '';
+
+    card.innerHTML = `
+      <div class="card-image">
+        ${imgHtml}
+        <span class="avail-badge ${sold?'sold':'available'}">${sold?'Sold':'Available'}</span>
+        ${sold ? '<div class="sold-overlay"><span>SOLD</span></div>' : ''}
+      </div>
+      <div class="card-body">
+        <p class="card-brand">${w.brand}</p>
+        <h3 class="card-name">${w.name}</h3>
+        <p class="card-ref">Ref. ${w.reference}</p>
+        ${specsHtml}
+        ${gradeHtml}
+        ${compHtml}
+        ${detailHtml}
+        ${bpwHtml}
+        ${priceHtml}
+      </div>`;
+
+    if (!sold) {
+      card.querySelector('.enquire-btn').addEventListener('click', e => {
+        e.stopPropagation(); openModal(w);
+      });
+    }
+    grid.appendChild(card);
+  });
+
+  wrap.innerHTML = setupBanner;
+  wrap.appendChild(grid);
+}
+
+// ── FILTERS ──
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', function() {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    this.classList.add('active');
+    activeFilter = this.dataset.f;
+    render();
+  });
+});
+document.getElementById('sortSel').addEventListener('change', function() { sortMode = this.value; render(); });
+
+// ── MODAL ──
+function openModal(w) {
+  currentWatch = w;
+  document.getElementById('mBrand').textContent = w.brand;
+  document.getElementById('mName').textContent = w.name;
+  document.getElementById('mRef').textContent = 'Ref. ' + w.reference;
+  document.getElementById('mFormWrap').style.display = 'block';
+  document.getElementById('mSuccess').style.display = 'none';
+  document.getElementById('mName2').value = '';
+  document.getElementById('mEmail').value = '';
+  document.getElementById('mMsg').value = '';
+  document.getElementById('modal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal() {
+  document.getElementById('modal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+document.getElementById('mClose').addEventListener('click', closeModal);
+document.getElementById('modal').addEventListener('click', e => { if(e.target===e.currentTarget) closeModal(); });
+
+document.getElementById('mSubmit').addEventListener('click', () => {
+  const name  = document.getElementById('mName2').value.trim();
+  const email = document.getElementById('mEmail').value.trim();
+  const msg   = document.getElementById('mMsg').value.trim();
+  if (!name || !email) { alert('Please provide your name and email.'); return; }
+  const sub  = encodeURIComponent(`Watch Enquiry: ${currentWatch.brand} ${currentWatch.name} (${currentWatch.reference})`);
+  const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nWatch: ${currentWatch.brand} ${currentWatch.name}\nReference: ${currentWatch.reference}\nAsking: ${currentWatch.asking ? fmt(currentWatch.asking) : 'TBD'}\n\n${msg}`);
+  window.open(`mailto:hello@2122watches.com?subject=${sub}&body=${body}`);
+  document.getElementById('mFormWrap').style.display = 'none';
+  document.getElementById('mSuccess').style.display = 'block';
+});
+
+load();
+</script>
+</body>
+</html>
