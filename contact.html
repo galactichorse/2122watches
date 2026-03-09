@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — 2122 Watches</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cormorant:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --cream: #faf8f4;
+  --warm-white: #f5f2ec;
+  --linen: #ede8de;
+  --linen-dark: #d9d2c4;
+  --ink: #1c1a17;
+  --ink-mid: #3d3a34;
+  --ink-light: #7a746a;
+  --ink-faint: #b0a898;
+  --burgundy: #6b2737;
+  --burgundy-light: #8a3347;
+  --gold: #8c6d3f;
+  --gold-light: #b08d5a;
+  --font-serif: 'EB Garamond', serif;
+  --font-display: 'Cormorant', serif;
+  --font-sans: 'Jost', sans-serif;
+  --rule: #d4cec4;
+}
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { background: var(--cream); color: var(--ink); font-family: var(--font-serif); line-height: 1.6; overflow-x: hidden; }
+
+.topbar {
+  background: var(--ink); color: var(--ink-faint); text-align: center;
+  padding: 0.5rem 2rem; font-family: var(--font-sans); font-size: 0.62rem; letter-spacing: 0.22em; text-transform: uppercase;
+}
+.topbar span { color: var(--gold-light); }
+
+header {
+  background: var(--cream); border-bottom: 1px solid var(--rule); position: sticky; top: 0; z-index: 100;
+}
+.header-inner {
+  max-width: 1300px; margin: 0 auto; padding: 0 2.5rem;
+  display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; height: 80px;
+}
+.header-left { display: flex; gap: 2.2rem; align-items: center; }
+.header-left a { font-family: var(--font-sans); font-size: 0.65rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--ink-light); text-decoration: none; transition: color 0.2s; }
+.header-left a:hover, .header-left a.active { color: var(--ink); }
+.header-left a.active { border-bottom: 1px solid var(--ink); padding-bottom: 1px; }
+.logo-center { text-align: center; }
+.logo-name { font-family: var(--font-display); font-size: 1.85rem; font-weight: 300; letter-spacing: 0.18em; color: var(--ink); line-height: 1; display: block; }
+.logo-rule { display: flex; align-items: center; gap: 0.6rem; justify-content: center; margin-top: 3px; }
+.logo-rule::before, .logo-rule::after { content: ''; flex: 1; height: 1px; background: var(--gold); opacity: 0.5; max-width: 30px; }
+.logo-tagline { font-family: var(--font-sans); font-size: 0.48rem; letter-spacing: 0.35em; text-transform: uppercase; color: var(--gold); }
+.header-right { display: flex; justify-content: flex-end; align-items: center; }
+.header-right a { font-family: var(--font-sans); font-size: 0.65rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--burgundy); border: 1px solid var(--burgundy); padding: 0.4rem 1rem; text-decoration: none; transition: all 0.2s; }
+.header-right a:hover { background: var(--burgundy); color: white; }
+
+/* PAGE */
+.contact-page {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 2.5rem 6rem;
+}
+
+/* PAGE HEADER */
+.page-header {
+  padding: 4rem 0 3rem;
+  border-bottom: 1px solid var(--rule);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.page-kicker {
+  font-family: var(--font-sans);
+  font-size: 0.58rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--burgundy);
+  margin-bottom: 0.5rem;
+  display: flex; align-items: center; gap: 0.7rem;
+}
+.page-kicker::before { content: ''; width: 20px; height: 1px; background: var(--burgundy); }
+.page-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  font-weight: 300;
+  color: var(--ink);
+  line-height: 1.05;
+  letter-spacing: 0.02em;
+}
+.page-title em { font-style: italic; color: var(--burgundy); }
+.page-desc {
+  max-width: 340px; text-align: right;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.98rem;
+  color: var(--ink-light);
+  line-height: 1.75;
+}
+
+/* TWO-COL */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 5rem;
+  padding-top: 4rem;
+}
+
+/* LEFT — info */
+.contact-info-col { }
+.info-section { margin-bottom: 2.5rem; }
+.info-section-title {
+  font-family: var(--font-sans);
+  font-size: 0.54rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--linen);
+  display: block;
+}
+.info-row { margin-bottom: 1rem; }
+.info-label {
+  font-family: var(--font-sans);
+  font-size: 0.54rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  display: block;
+  margin-bottom: 0.2rem;
+}
+.info-val {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  color: var(--ink-mid);
+}
+.info-note {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.85rem;
+  color: var(--ink-faint);
+  margin-top: 2px;
+  display: block;
+}
+
+.promise-list { list-style: none; display: flex; flex-direction: column; gap: 0.7rem; }
+.promise-list li {
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  color: var(--ink-light);
+  display: flex; align-items: flex-start; gap: 0.7rem;
+  line-height: 1.5;
+}
+.promise-list li::before {
+  content: '—';
+  color: var(--burgundy);
+  flex-shrink: 0;
+  margin-top: 0.05rem;
+}
+
+/* RIGHT — form */
+.form-col { }
+.form-title {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 300;
+  color: var(--ink);
+  margin-bottom: 0.4rem;
+  letter-spacing: 0.04em;
+}
+.form-intro {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.95rem;
+  color: var(--ink-light);
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.field { margin-bottom: 1.1rem; }
+.field.full { grid-column: 1/-1; }
+.flabel {
+  display: block;
+  font-family: var(--font-sans);
+  font-size: 0.52rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--ink-light);
+  margin-bottom: 0.38rem;
+}
+.finput, .fselect, .ftextarea {
+  width: 100%;
+  background: white;
+  border: 1px solid var(--rule);
+  color: var(--ink);
+  font-family: var(--font-serif);
+  font-size: 0.95rem;
+  padding: 0.7rem 0.9rem;
+  outline: none;
+  transition: border-color 0.15s;
+  resize: vertical;
+}
+.finput:focus, .fselect:focus, .ftextarea:focus { border-color: var(--ink-light); }
+.finput::placeholder, .ftextarea::placeholder { color: var(--ink-faint); }
+.fselect { appearance: none; cursor: pointer; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23b0a898'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 0.9rem center; }
+.fselect option { background: white; color: var(--ink); }
+.ftextarea { min-height: 120px; }
+.fsubmit {
+  width: 100%;
+  font-family: var(--font-sans);
+  font-size: 0.62rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: white;
+  background: var(--ink);
+  border: none;
+  padding: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 0.3rem;
+}
+.fsubmit:hover { background: var(--burgundy); }
+.fnote {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.82rem;
+  color: var(--ink-faint);
+  text-align: center;
+  margin-top: 0.7rem;
+}
+
+.success-state {
+  display: none;
+  text-align: center;
+  padding: 3rem 0;
+  border: 1px solid var(--rule);
+  background: var(--warm-white);
+}
+.success-state h3 { font-family: var(--font-display); font-size: 1.8rem; font-weight: 300; color: var(--ink); margin-bottom: 0.5rem; }
+.success-state p { font-family: var(--font-serif); font-style: italic; color: var(--ink-light); font-size: 0.95rem; line-height: 1.65; }
+
+footer {
+  background: var(--ink); color: var(--ink-faint);
+}
+.footer-inner {
+  max-width: 1300px; margin: 0 auto; padding: 3rem 2.5rem;
+  display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 2rem;
+}
+.footer-links { display: flex; gap: 2rem; }
+.footer-links a { font-family: var(--font-sans); font-size: 0.58rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-faint); text-decoration: none; transition: color 0.15s; }
+.footer-links a:hover { color: var(--gold-light); }
+.footer-logo { text-align: center; font-family: var(--font-display); font-size: 1.4rem; font-weight: 300; letter-spacing: 0.2em; color: white; }
+.footer-copy { text-align: right; font-family: var(--font-sans); font-size: 0.54rem; letter-spacing: 0.15em; color: var(--ink-light); opacity: 0.5; }
+
+@media (max-width: 900px) {
+  .header-inner { grid-template-columns: auto 1fr; }
+  .header-right { display: none; }
+  .page-header { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
+  .page-desc { text-align: left; }
+  .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .form-row { grid-template-columns: 1fr; }
+  .footer-inner { grid-template-columns: 1fr; text-align: center; }
+  .footer-links { justify-content: center; }
+  .footer-copy { text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">Authenticated Pre-Owned Luxury Timepieces &nbsp;·&nbsp; <span>24-hour enquiry response</span></div>
+
+<header>
+  <div class="header-inner">
+    <nav class="header-left">
+      <a href="index.html">Shop</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+    <div class="logo-center">
+      <span class="logo-name">2122 Watches</span>
+      <div class="logo-rule"><span class="logo-tagline">Est. 2025</span></div>
+    </div>
+    <div class="header-right">
+      <a href="contact.html">Make an Enquiry</a>
+    </div>
+  </div>
+</header>
+
+<div class="contact-page">
+  <div class="page-header">
+    <div>
+      <p class="page-kicker">Get in Touch</p>
+      <h1 class="page-title">We are here<br>to <em>assist you.</em></h1>
+    </div>
+    <p class="page-desc">Whether you're enquiring about a specific piece, searching for something we don't currently stock, or looking to sell — we welcome your message.</p>
+  </div>
+
+  <div class="contact-grid">
+    <!-- LEFT -->
+    <div class="contact-info-col">
+      <div class="info-section">
+        <span class="info-section-title">Contact Details</span>
+        <div class="info-row">
+          <span class="info-label">Email</span>
+          <span class="info-val">hello@2122watches.com</span>
+        </div>
+        <div class="info-row">
+          <span class="info-label">Response Time</span>
+          <span class="info-val">Within 24 hours</span>
+          <span class="info-note">Typically much sooner</span>
+        </div>
+      </div>
+
+      <div class="info-section">
+        <span class="info-section-title">Our Commitment</span>
+        <ul class="promise-list">
+          <li>Every watch is individually authenticated before listing</li>
+          <li>Condition assessed and graded with complete transparency</li>
+          <li>Box, papers, and warranty status clearly disclosed</li>
+          <li>No obligation on any enquiry</li>
+          <li>Additional photographs available on request</li>
+        </ul>
+      </div>
+
+      <div class="info-section">
+        <span class="info-section-title">What We Can Help With</span>
+        <ul class="promise-list">
+          <li>Enquiries about a specific listed piece</li>
+          <li>Finding a watch we don't currently have in stock</li>
+          <li>Selling or consigning your own timepiece</li>
+          <li>General questions about the buying process</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="form-col">
+      <h2 class="form-title">Send a Message</h2>
+      <p class="form-intro">Fill in the form below and we will respond promptly. All enquiries are handled personally.</p>
+
+      <div id="contactForm">
+        <div class="form-row">
+          <div class="field">
+            <label class="flabel" for="fFirst">First Name</label>
+            <input class="finput" type="text" id="fFirst" placeholder="First name">
+          </div>
+          <div class="field">
+            <label class="flabel" for="fLast">Last Name</label>
+            <input class="finput" type="text" id="fLast" placeholder="Last name">
+          </div>
+        </div>
+        <div class="field">
+          <label class="flabel" for="fEmail">Email Address</label>
+          <input class="finput" type="email" id="fEmail" placeholder="you@example.com">
+        </div>
+        <div class="field">
+          <label class="flabel" for="fType">Nature of Enquiry</label>
+          <select class="fselect" id="fType">
+            <option value="">Please select…</option>
+            <option value="specific">Enquiry about a listed timepiece</option>
+            <option value="search">Looking for a specific watch</option>
+            <option value="sell">I wish to sell or consign a watch</option>
+            <option value="general">General question</option>
+          </select>
+        </div>
+        <div class="field">
+          <label class="flabel" for="fMsg">Your Message</label>
+          <textarea class="ftextarea" id="fMsg" placeholder="Please describe what you are looking for, or include a reference number if enquiring about a specific listing…"></textarea>
+        </div>
+        <button class="fsubmit" id="fSubmit">Send Message</button>
+        <p class="fnote">We respond to every message personally, within 24 hours.</p>
+      </div>
+
+      <div class="success-state" id="successState">
+        <h3>Message Received</h3>
+        <p>Thank you for getting in touch.<br>We will respond to your enquiry within 24 hours.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-links">
+      <a href="index.html">Shop</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="footer-logo">2122 Watches</div>
+    <div class="footer-copy">© 2025 2122 Watches. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('fSubmit').addEventListener('click', () => {
+  const first = document.getElementById('fFirst').value.trim();
+  const last = document.getElementById('fLast').value.trim();
+  const email = document.getElementById('fEmail').value.trim();
+  const type = document.getElementById('fType').value;
+  const msg = document.getElementById('fMsg').value.trim();
+  if (!first || !email) { alert('Please provide your name and email address.'); return; }
+  const sub = encodeURIComponent(`2122 Watches — ${type || 'General Enquiry'}`);
+  const body = encodeURIComponent(`Name: ${first} ${last}\nEmail: ${email}\nType: ${type}\n\n${msg}`);
+  window.open(`mailto:hello@2122watches.com?subject=${sub}&body=${body}`);
+  document.getElementById('contactForm').style.display = 'none';
+  document.getElementById('successState').style.display = 'block';
+});
+</script>
+</body>
+</html>
