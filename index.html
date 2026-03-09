@@ -1016,6 +1016,15 @@ function parseCSV(text) {
   }).filter(r => r['Name'] && r['Name'].trim());
 }
 
+// ── NORMALISE AVAILABILITY ──
+// Handles any casing/spacing: "sold out", "Sold Out", "SOLD OUT", "available", etc.
+function normaliseAvail(v) {
+  if (!v) return 'Available';
+  const s = v.trim().toLowerCase();
+  if (s.includes('sold')) return 'Sold Out';
+  return 'Available';
+}
+
 // ── COLUMN MAPPING ──
 // Maps your exact Google Sheet column headers → normalised watch object
 function mapRow(r) {
@@ -1035,13 +1044,13 @@ function mapRow(r) {
     warrantyCard:     pBool(r['Warranty Card']),   // has the physical card
     warrantyActive:   pBool(r['Warranty Active']), // still within warranty period
 
-    // Condition
-    conditionGrade:   r['Condition Notes (Mint, Excellent, Good, Fair, Poor)'] || '',
-    conditionDetail:  r['Details of Condition']   || '',
+    // Condition — normalise grade to title case so display is consistent
+    conditionGrade:   (r['Condition Notes (Mint, Excellent, Good, Fair, Poor)'] || '').trim(),
+    conditionDetail:  (r['Details of Condition'] || '').trim(),
 
-    // Pricing & availability
+    // Pricing & availability — normalised to handle any casing / spacing
     asking:           pNum(r['Asking Price']),
-    availability:     r['Availability']            || 'Available',
+    availability:     normaliseAvail(r['Availability']),
 
     // Media
     imageUrl:         r['Pics']                    || '',
@@ -1103,7 +1112,7 @@ function updateStats() {
 // ── CONDITION GRADE STYLE ──
 const gradeClass = g => {
   const map = { mint:'grade-mint', excellent:'grade-excellent', good:'grade-good', fair:'grade-fair', poor:'grade-poor' };
-  return map[(g||'').toLowerCase()] || '';
+  return map[(g||'').trim().toLowerCase()] || '';
 };
 
 // ── RENDER ──
@@ -1288,7 +1297,7 @@ document.getElementById('mSubmit').addEventListener('click', () => {
   if (!name || !email) { alert('Please provide your name and email.'); return; }
   const sub  = encodeURIComponent(`Watch Enquiry: ${currentWatch.brand} ${currentWatch.name} (${currentWatch.reference})`);
   const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nWatch: ${currentWatch.brand} ${currentWatch.name}\nReference: ${currentWatch.reference}\nAsking: ${currentWatch.asking ? fmt(currentWatch.asking) : 'TBD'}\n\n${msg}`);
-  window.open(`mailto:hello@2122watches.com?subject=${sub}&body=${body}`);
+  window.open(`mailto:purpler909@gmail.com?subject=${sub}&body=${body}`);
   document.getElementById('mFormWrap').style.display = 'none';
   document.getElementById('mSuccess').style.display = 'block';
 });
